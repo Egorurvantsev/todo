@@ -8,7 +8,6 @@ from rest_framework.renderers import JSONRenderer, BrowsableAPIRenderer
 class UsersViewSet(mixins.RetrieveModelMixin,
                    mixins.UpdateModelMixin,
                    mixins.ListModelMixin,
-                   mixins.DestroyModelMixin,
                    GenericViewSet):
     queryset = Users.objects.all()
     serializer_class = UsersModelSerializer
