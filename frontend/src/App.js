@@ -5,7 +5,7 @@ import axios from 'axios'
 import {Link, Route, Routes, BrowserRouter} from "react-router-dom";
 import Project from "./components/Project.js";
 import User from "./components/User.js";
-import Todo from "./components/Todo";
+import Todo from "./components/Todo.js";
 
 
 class App extends React.Component {
