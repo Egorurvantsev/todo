@@ -3,6 +3,7 @@ from .models import Project, Todo
 from .serializer import ProjectModelSerializer, TodoModelSerializer
 from rest_framework.pagination import LimitOffsetPagination
 from .filters import ProjectFilter
+from rest_framework.permissions import IsAuthenticated
 
 
 class ProjectLimitOffsetPagination(LimitOffsetPagination):
