@@ -9,8 +9,8 @@ from rest_framework.permissions import IsAuthenticated, AllowAny, IsAdminUser
 class UsersViewSet(mixins.RetrieveModelMixin,
                    mixins.UpdateModelMixin,
                    mixins.ListModelMixin,
+                   mixins.CreateModelMixin,
                    GenericViewSet):
-    permission_classes = [IsAdminUser]
     queryset = Users.objects.all()
     serializer_class = UsersModelSerializer
     renderer_classes = [JSONRenderer, BrowsableAPIRenderer]
