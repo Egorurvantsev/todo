@@ -5,7 +5,7 @@ import axios from 'axios'
 import {Link, Route, Routes, BrowserRouter} from "react-router-dom";
 import Project from "./components/Project.js";
 import User from "./components/User.js";
-import Todo from "./components/Todo";
+import Todo from "./components/Todo.js";
 
 
 class App extends React.Component {
@@ -22,6 +22,7 @@ class App extends React.Component {
       'projects':  []
     }
   }
+
 
   componentDidMount() {
     axios.get('http://127.0.0.1:8000/api/users/')
@@ -51,7 +52,6 @@ class App extends React.Component {
                 }
             )
         }).catch(error => console.log(error))
-
   }
 
 
