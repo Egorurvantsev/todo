@@ -22,9 +22,9 @@ from users.views import UsersViewSet
 from rest_framework.authtoken.views import obtain_auth_token
 
 router = DefaultRouter()
+router.register('users', UsersViewSet, basename='users')
 router.register('project', ProjectModelViewSet)
 router.register('todo', TodoModelViewSet)
-router.register('users', UsersViewSet, basename='users')
 
 urlpatterns = [
     path('admin/', admin.site.urls),

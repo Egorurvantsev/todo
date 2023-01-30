@@ -6,6 +6,7 @@ import {Link, Route, Routes, BrowserRouter} from "react-router-dom";
 import Project from "./components/Project.js";
 import User from "./components/User.js";
 import Todo from "./components/Todo.js";
+import LoginForm from './components/Auth.js';
 
 
 class App extends React.Component {
@@ -56,6 +57,9 @@ class App extends React.Component {
               <nav>
                   <ul>
                       <li>
+                            <Link to='/login'>Login</Link>
+                      </li>
+                      <li>
                           <Link to='/user'>Users</Link>
                       </li>
                       <li>
@@ -70,6 +74,7 @@ class App extends React.Component {
                   <Route exact path='/user' element={<User items={this.state.users}/>}/>
                   <Route exact path='/projects' element={<Project items={this.state.projects}/>}/>
                   <Route exact path='/todo' element={<Todo items={this.state.todo}/>}/>
+                  <Route exact path='/login' element={<LoginForm/>}/>
               </Routes>
           </BrowserRouter>
           <footer>
