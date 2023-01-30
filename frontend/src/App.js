@@ -11,14 +11,8 @@ import Todo from "./components/Todo.js";
 class App extends React.Component {
   constructor(props) {
     super(props)
-      const project1 = {name: '1', url_github: 'https://elschool.ru/users/diaries', users: 1}
-      const project2 = {name: '2', url_github: 'https://elschool.ru/users/diaries/hui', users: 2}
-      const projects = [project1, project2]
-      const user1 = {username: 'mmkndr', firstname: 'hu', lastname: 'vladislav', email: 'pasholvpopu@mail.ru'}
-      const user2 = {username: 'mmkndr1', firstname: 'hu1', lastname: 'vladisla1v', email: 'pasho1lvpo1pu@mail.ru'}
-      const users = [user2, user1]
     this.state = {
-      'users': users,
+      'users': [],
       'projects':  []
     }
   }
