@@ -1,12 +1,9 @@
 import React from "react";
 
-class LoginForm extends React.Component{
+class  LoginForm extends React.Component{
     constructor(props) {
-        super(props);
-        this.state = {
-            login: '',
-            password: ''
-        }
+        super(props)
+        this.state = {login: '', password: ''}
     }
 
     handleChange(event) {
@@ -14,11 +11,11 @@ class LoginForm extends React.Component{
             {
                 [event.target.name]: event.target.value
             }
-        )
+        );
     }
 
     handleSubmit(event) {
-        console.log(this.state.login + ' ' + this.state.password)
+        this.props.get_token(this.state.login, this.state.password)
         event.preventDefault()
     }
 
@@ -31,7 +28,7 @@ class LoginForm extends React.Component{
                        onChange={(event)=>this.handleChange(event)} />
                 <input type='submit' value='Login'/>
             </form>
-            )
+        );
     }
 }
 
