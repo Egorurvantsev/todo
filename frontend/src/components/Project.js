@@ -21,7 +21,7 @@ const ProjectList = ({items}) => {
                 </tr>
             </thead>
 
-            {items?.map((item) => <ProjectItem key={item.name} item={item} />)}
+            {items.map((item) => <ProjectItem key={item.name} item={item} />)}
         </table>
     )
 }

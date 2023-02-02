@@ -27,7 +27,7 @@ const TodoList = ({items}) => {
                 </tr>
             </thead>
 
-            {items.map((item) => <TodoItem key={item.name} item={item} />)}
+            {items?.map((item) => <TodoItem key={item.name} item={item} />)}
         </table>
     )
 }
