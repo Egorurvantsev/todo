@@ -6,7 +6,7 @@ class UsersModelSerializer(ModelSerializer):
 # class UsersModelSerializer(HyperlinkedModelSerializer):
     class Meta:
         model = Users
-        fields = '__all__'
+        exclude = ['groups', 'user_permissions', 'date_joined', 'last_login', ]
 
 
     def create(self, validated_data):

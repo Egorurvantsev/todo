@@ -5,7 +5,6 @@ from .serializer import UsersModelSerializer
 from rest_framework.renderers import JSONRenderer, BrowsableAPIRenderer
 from rest_framework.permissions import IsAuthenticated, AllowAny, IsAdminUser
 
-
 class UsersViewSet(mixins.RetrieveModelMixin,
                    mixins.UpdateModelMixin,
                    mixins.ListModelMixin,
