@@ -26,7 +26,7 @@ from rest_framework import permissions
 
 schema_view = get_schema_view(
     openapi.Info(
-        title='Todo',
+        title='Documentation My Project',
         default_version='0.1',
         description='Test',
         contact=openapi.Contact(email='mail@gmail.com'),
