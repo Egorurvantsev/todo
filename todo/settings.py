@@ -150,7 +150,7 @@ REST_FRAMEWORK = {
 }
 
 GRAPHENE = {
-"SCHEMA": "note.schema.schema"
+"SCHEMA": "todo.schema.schema"
 }
 
 AUTH_USER_MODEL = "users.Users"
