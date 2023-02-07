@@ -1,3 +1,12 @@
 .idea
 db.sqlite3
 frontend/node_modules
+users/migrations/__pycache__/
+
+todo/__pycache__/
+
+note/__pycache__/
+
+users/__pycache__/
+
+note/migrations/__pycache__/
