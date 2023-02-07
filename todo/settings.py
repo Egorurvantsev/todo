@@ -40,8 +40,9 @@ INSTALLED_APPS = [
     'corsheaders',
     'django_filters',
     'drf_yasg',
+    'graphene_django',
     'users',
-    'note'
+    'note',
 ]
 
 MIDDLEWARE = [
@@ -146,6 +147,10 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.TokenAuthentication',
     ],
     'DEFAULT_VERSIONING_CLASS': 'rest_framework.versioning.QueryParameterVersioning',
+}
+
+GRAPHENE = {
+"SCHEMA": "note.schema.schema"
 }
 
 AUTH_USER_MODEL = "users.Users"
