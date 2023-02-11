@@ -14,16 +14,16 @@ const UserItem = ({item}) => {
 const UserList = ({items}) => {
     return (
         <table>
-            <thead>
+            <tbody>
                 <tr>
                     <th>username</th>
                     <th>firstname</th>
                     <th>lastname</th>
                     <th>email</th>
                 </tr>
-            </thead>
+            </tbody>
 
-            {items.map((item) => <UserItem key={item.username} item={item} />)}
+            {items?.map((item) => <UserItem key={item.username} item={item} />)}
         </table>
     )
 }

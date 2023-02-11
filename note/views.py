@@ -1,3 +1,4 @@
+from rest_framework.renderers import JSONRenderer, BrowsableAPIRenderer
 from rest_framework.viewsets import ModelViewSet, ViewSet, GenericViewSet
 from .models import Project, Todo
 from .serializer import ProjectModelSerializer, TodoModelSerializer
@@ -19,6 +20,7 @@ class ProjectModelViewSet(ModelViewSet):
     serializer_class = ProjectModelSerializer
     pagination_class = ProjectLimitOffsetPagination
     filterset_class = ProjectFilter
+    renderer_classes = [JSONRenderer, BrowsableAPIRenderer]
 
 
 class TodoModelViewSet(ModelViewSet):
@@ -26,3 +28,4 @@ class TodoModelViewSet(ModelViewSet):
     serializer_class = TodoModelSerializer
     pagination_class = TodoLimitOffsetPagination
     filterset_fields = ['project']
+    renderer_classes = [JSONRenderer, BrowsableAPIRenderer]

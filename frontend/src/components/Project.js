@@ -4,7 +4,7 @@ const ProjectItem = ({item}) => {
     return (
         <tr>
             <td>{item.name}</td>
-            <td>{item.url_github}</td>
+            <td>{item.url}</td>
             <td>{item.users}</td>
         </tr>
     )
@@ -13,15 +13,14 @@ const ProjectItem = ({item}) => {
 const ProjectList = ({items}) => {
     return (
         <table>
-            <thead>
+            <tbody>
                 <tr>
                     <th>name</th>
-                    <th>url_github</th>
+                    <th>url</th>
                     <th>users</th>
                 </tr>
-            </thead>
-
-            {items.map((item) => <ProjectItem key={item.name} item={item} />)}
+            </tbody>
+            {items?.map((item) => <ProjectItem key={item.name} item={item} />)}
         </table>
     )
 }

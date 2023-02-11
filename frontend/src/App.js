@@ -1,14 +1,13 @@
 import React from 'react'
 import logo from './logo.svg';
 import './App.css';
-import axios from 'axios'
 import {Link, Route, Routes, BrowserRouter} from "react-router-dom";
 import Project from "./components/Project.js";
 import User from "./components/User.js";
 import Todo from "./components/Todo.js";
 import LoginForm from './components/Auth.js';
 import Cookies from "universal-cookie/es6";
-
+import axios from "axios";
 
 class App extends React.Component {
   constructor(props) {
